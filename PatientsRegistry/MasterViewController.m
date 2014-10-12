@@ -14,6 +14,7 @@
 // Model
 #import "Patient.h"
 #import "Patient+Create.h"
+#import "Patient+Age.h"
 
 @interface MasterViewController ()
 
@@ -108,8 +109,9 @@
 }
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
-    NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = [[object valueForKey:@"name"] description];
+    Patient *patient = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    cell.textLabel.text = patient.name;
+    cell.detailTextLabel.text = (patient.age == PatientAgeUnknown) ? @"Unknown" : [NSString stringWithFormat:@"%ld", (long)patient.age];
 }
 
 #pragma mark - Fetched results controller

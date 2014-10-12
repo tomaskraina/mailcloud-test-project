@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9C1204E819EAD59C00823156 /* Patient+Create.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1204E719EAD59C00823156 /* Patient+Create.m */; };
 		9C1204EB19EAD80900823156 /* Patient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1204EA19EAD80900823156 /* Patient.m */; };
+		9C1204EE19EB005800823156 /* Patient+Age.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1204ED19EB005800823156 /* Patient+Age.m */; };
 		9CCB121519EAC854001A009D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCB121419EAC854001A009D /* main.m */; };
 		9CCB121819EAC854001A009D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCB121719EAC854001A009D /* AppDelegate.m */; };
 		9CCB121B19EAC854001A009D /* PatientsRegistry.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9CCB121919EAC854001A009D /* PatientsRegistry.xcdatamodeld */; };
@@ -37,6 +38,8 @@
 		9C1204E719EAD59C00823156 /* Patient+Create.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Patient+Create.m"; path = "Model/Patient+Create.m"; sourceTree = "<group>"; };
 		9C1204E919EAD80900823156 /* Patient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Patient.h; path = Model/Patient.h; sourceTree = "<group>"; };
 		9C1204EA19EAD80900823156 /* Patient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Patient.m; path = Model/Patient.m; sourceTree = "<group>"; };
+		9C1204EC19EB005800823156 /* Patient+Age.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Patient+Age.h"; path = "Model/Patient+Age.h"; sourceTree = "<group>"; };
+		9C1204ED19EB005800823156 /* Patient+Age.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Patient+Age.m"; path = "Model/Patient+Age.m"; sourceTree = "<group>"; };
 		9CCB120F19EAC854001A009D /* PatientsRegistry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PatientsRegistry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CCB121319EAC854001A009D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CCB121419EAC854001A009D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -143,6 +146,8 @@
 				9CCB121919EAC854001A009D /* PatientsRegistry.xcdatamodeld */,
 				9C1204E619EAD59C00823156 /* Patient+Create.h */,
 				9C1204E719EAD59C00823156 /* Patient+Create.m */,
+				9C1204EC19EB005800823156 /* Patient+Age.h */,
+				9C1204ED19EB005800823156 /* Patient+Age.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -274,6 +279,7 @@
 				9C1204EB19EAD80900823156 /* Patient.m in Sources */,
 				9CCB122119EAC854001A009D /* DetailViewController.m in Sources */,
 				9CCB121E19EAC854001A009D /* MasterViewController.m in Sources */,
+				9C1204EE19EB005800823156 /* Patient+Age.m in Sources */,
 				9CCB121B19EAC854001A009D /* PatientsRegistry.xcdatamodeld in Sources */,
 				9CCB121819EAC854001A009D /* AppDelegate.m in Sources */,
 				9CCB121519EAC854001A009D /* main.m in Sources */,
