@@ -19,6 +19,7 @@
 		9CCB122919EAC854001A009D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CCB122719EAC854001A009D /* LaunchScreen.xib */; };
 		9CCB123519EAC854001A009D /* PatientsRegistryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCB123419EAC854001A009D /* PatientsRegistryTests.m */; };
 		9CCB123F19EACB4A001A009D /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 9CCB123E19EACB4A001A009D /* README.md */; };
+		9CCB124819EAE7D5001A009D /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCB124719EAE7D5001A009D /* EditViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		9CCB123319EAC854001A009D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CCB123419EAC854001A009D /* PatientsRegistryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PatientsRegistryTests.m; sourceTree = "<group>"; };
 		9CCB123E19EACB4A001A009D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		9CCB124619EAE7D5001A009D /* EditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditViewController.h; sourceTree = "<group>"; };
+		9CCB124719EAE7D5001A009D /* EditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +154,8 @@
 				9CCB121D19EAC854001A009D /* MasterViewController.m */,
 				9CCB121F19EAC854001A009D /* DetailViewController.h */,
 				9CCB122019EAC854001A009D /* DetailViewController.m */,
+				9CCB124619EAE7D5001A009D /* EditViewController.h */,
+				9CCB124719EAE7D5001A009D /* EditViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -265,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CCB123F19EACB4A001A009D /* README.md in Sources */,
+				9CCB124819EAE7D5001A009D /* EditViewController.m in Sources */,
 				9C1204EB19EAD80900823156 /* Patient.m in Sources */,
 				9CCB122119EAC854001A009D /* DetailViewController.m in Sources */,
 				9CCB121E19EAC854001A009D /* MasterViewController.m in Sources */,
