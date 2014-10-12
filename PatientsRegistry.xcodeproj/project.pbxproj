@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C1204E819EAD59C00823156 /* Patient+Create.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1204E719EAD59C00823156 /* Patient+Create.m */; };
+		9C1204EB19EAD80900823156 /* Patient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1204EA19EAD80900823156 /* Patient.m */; };
 		9CCB121519EAC854001A009D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCB121419EAC854001A009D /* main.m */; };
 		9CCB121819EAC854001A009D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCB121719EAC854001A009D /* AppDelegate.m */; };
 		9CCB121B19EAC854001A009D /* PatientsRegistry.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9CCB121919EAC854001A009D /* PatientsRegistry.xcdatamodeld */; };
@@ -30,6 +32,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9C1204E619EAD59C00823156 /* Patient+Create.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Patient+Create.h"; path = "Model/Patient+Create.h"; sourceTree = "<group>"; };
+		9C1204E719EAD59C00823156 /* Patient+Create.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Patient+Create.m"; path = "Model/Patient+Create.m"; sourceTree = "<group>"; };
+		9C1204E919EAD80900823156 /* Patient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Patient.h; path = Model/Patient.h; sourceTree = "<group>"; };
+		9C1204EA19EAD80900823156 /* Patient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Patient.m; path = Model/Patient.m; sourceTree = "<group>"; };
 		9CCB120F19EAC854001A009D /* PatientsRegistry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PatientsRegistry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CCB121319EAC854001A009D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CCB121419EAC854001A009D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -88,16 +94,13 @@
 		9CCB121119EAC854001A009D /* PatientsRegistry */ = {
 			isa = PBXGroup;
 			children = (
+				9CCB124319EAD300001A009D /* Model */,
+				9CCB124419EAD31C001A009D /* View Controllers */,
 				9CCB121619EAC854001A009D /* AppDelegate.h */,
 				9CCB121719EAC854001A009D /* AppDelegate.m */,
-				9CCB121C19EAC854001A009D /* MasterViewController.h */,
-				9CCB121D19EAC854001A009D /* MasterViewController.m */,
-				9CCB121F19EAC854001A009D /* DetailViewController.h */,
-				9CCB122019EAC854001A009D /* DetailViewController.m */,
 				9CCB122219EAC854001A009D /* Main.storyboard */,
 				9CCB122519EAC854001A009D /* Images.xcassets */,
 				9CCB122719EAC854001A009D /* LaunchScreen.xib */,
-				9CCB121919EAC854001A009D /* PatientsRegistry.xcdatamodeld */,
 				9CCB121219EAC854001A009D /* Supporting Files */,
 			);
 			path = PatientsRegistry;
@@ -128,6 +131,37 @@
 				9CCB123319EAC854001A009D /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9CCB124319EAD300001A009D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9CCB124519EAD4EF001A009D /* Generated */,
+				9CCB121919EAC854001A009D /* PatientsRegistry.xcdatamodeld */,
+				9C1204E619EAD59C00823156 /* Patient+Create.h */,
+				9C1204E719EAD59C00823156 /* Patient+Create.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		9CCB124419EAD31C001A009D /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9CCB121C19EAC854001A009D /* MasterViewController.h */,
+				9CCB121D19EAC854001A009D /* MasterViewController.m */,
+				9CCB121F19EAC854001A009D /* DetailViewController.h */,
+				9CCB122019EAC854001A009D /* DetailViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		9CCB124519EAD4EF001A009D /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				9C1204E919EAD80900823156 /* Patient.h */,
+				9C1204EA19EAD80900823156 /* Patient.m */,
+			);
+			name = Generated;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,11 +265,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CCB123F19EACB4A001A009D /* README.md in Sources */,
+				9C1204EB19EAD80900823156 /* Patient.m in Sources */,
 				9CCB122119EAC854001A009D /* DetailViewController.m in Sources */,
 				9CCB121E19EAC854001A009D /* MasterViewController.m in Sources */,
 				9CCB121B19EAC854001A009D /* PatientsRegistry.xcdatamodeld in Sources */,
 				9CCB121819EAC854001A009D /* AppDelegate.m in Sources */,
 				9CCB121519EAC854001A009D /* main.m in Sources */,
+				9C1204E819EAD59C00823156 /* Patient+Create.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +464,7 @@
 				9CCB123A19EAC854001A009D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9CCB123B19EAC854001A009D /* Build configuration list for PBXNativeTarget "PatientsRegistryTests" */ = {
 			isa = XCConfigurationList;
@@ -436,6 +473,7 @@
 				9CCB123D19EAC854001A009D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
