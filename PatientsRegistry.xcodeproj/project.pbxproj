@@ -19,7 +19,6 @@
 		9CCB122619EAC854001A009D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CCB122519EAC854001A009D /* Images.xcassets */; };
 		9CCB122919EAC854001A009D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CCB122719EAC854001A009D /* LaunchScreen.xib */; };
 		9CCB123519EAC854001A009D /* PatientsRegistryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCB123419EAC854001A009D /* PatientsRegistryTests.m */; };
-		9CCB123F19EACB4A001A009D /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 9CCB123E19EACB4A001A009D /* README.md */; };
 		9CCB124819EAE7D5001A009D /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCB124719EAE7D5001A009D /* EditViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -274,7 +273,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CCB123F19EACB4A001A009D /* README.md in Sources */,
 				9CCB124819EAE7D5001A009D /* EditViewController.m in Sources */,
 				9C1204EB19EAD80900823156 /* Patient.m in Sources */,
 				9CCB122119EAC854001A009D /* DetailViewController.m in Sources */,
