@@ -107,6 +107,10 @@ typedef NS_ENUM(NSInteger, EditViewControllerGenderSegmentedControlValue) {
 
 - (IBAction)save:(id)sender
 {
+    // Validation
+    if (![self validateUserInput]) return;
+    
+    // Update model object
     if (self.patient) {
         self.patient.name = self.nameTextField.text;
         self.patient.birth = self.birthDatePicker.date;
@@ -142,6 +146,22 @@ typedef NS_ENUM(NSInteger, EditViewControllerGenderSegmentedControlValue) {
 */
 
 #pragma mark - convenience methods
+
+- (BOOL)validateUserInput
+{
+    // Simple validation logic
+    // for more complex validation perhaps "Managed Object Validation" should be used
+    // https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/CoreData/Articles/cdValidation.html
+    if (self.nameTextField.text.length == 0) {
+        [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Missing name", nil)
+                                    message:NSLocalizedString(@"Enter patient's name", nil) delegate:nil
+                          cancelButtonTitle:NSLocalizedString(@"Cancel", nil)
+                          otherButtonTitles:nil] show];
+        return NO;
+    }
+    
+    return YES;
+}
 
 - (EditViewControllerGenderSegmentedControlValue)segmentedControlValueForPatient:(Patient *)patient
 {
