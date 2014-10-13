@@ -18,3 +18,13 @@ The app will need to have 3 features:
 
 - Responsive/Adaptive user interface, so it can be used on iPads and iPhones
 - Written in Swift or Objective-C
+
+Implementation
+---------------------
+- Minimum Viable Product that fulfills all requirements
+- Written in Objective-C
+- Uses CoreData as a persistent storage for patients records
+- Uses auto layout constraints
+- Utilizes adaptive design, specific constraints are configured for size class `w-Any h-Compact` (all iPhones in landscape)
+- Usage of adaptive design is inspired by Apple's code sample "AdaptivePhotos"
+- Most of the CoreData code is from the CoreData Xcode template
