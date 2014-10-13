@@ -51,12 +51,17 @@ typedef NS_ENUM(NSInteger, EditViewControllerGenderSegmentedControlValue) {
 {
     // Update the user interface for the detail item.
     if (self.patient) {
+        self.navigationItem.title = NSLocalizedString(@"Edit patient", nil);
+        
         self.nameTextField.text = self.patient.name;
         self.noteTextView.text = self.patient.note;
         self.genderSegmentedControl.selectedSegmentIndex = [self segmentedControlValueForPatient:self.patient];
         if (self.patient.birth) {
             self.birthDatePicker.date = self.patient.birth;
         }
+    }
+    else {
+        self.navigationItem.title = NSLocalizedString(@"New patient", nil);
     }
 }
 
@@ -133,6 +138,9 @@ typedef NS_ENUM(NSInteger, EditViewControllerGenderSegmentedControlValue) {
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }
+    
+    // reconfigure view for saved patient
+    [self configureView];
 }
 
 /*
