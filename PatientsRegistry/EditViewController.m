@@ -68,6 +68,9 @@ typedef NS_ENUM(NSInteger, EditViewControllerGenderSegmentedControlValue) {
     // Do any additional setup after loading the view, typically from a nib.
     [self configureView];
     
+    // Set date of birth in the future should not be possible
+    self.birthDatePicker.maximumDate = [NSDate date];
+    
     // Add gesture recognizer to dismiss keyboard when tapped outside text input
     UITapGestureRecognizer* tapBackground = [ [UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard:)];
     tapBackground.numberOfTapsRequired = 1;
