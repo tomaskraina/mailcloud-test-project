@@ -141,6 +141,8 @@ typedef NS_ENUM(NSInteger, EditViewControllerGenderSegmentedControlValue) {
     
     // reconfigure view for saved patient
     [self configureView];
+    
+    // TODO: Show master view controller programmatically (if split vc is collapsed)
 }
 
 /*
