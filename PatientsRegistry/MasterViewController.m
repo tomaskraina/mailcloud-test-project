@@ -99,11 +99,16 @@
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
-        [context deleteObject:[self.fetchedResultsController objectAtIndexPath:indexPath]];
         
-        // TODO: check if this object is currently displayed in detail/edit view controller
+        // Check if this object is currently displayed in detail/edit view controller
         // and display the empty view controller if that's the case
+        NSManagedObject *objectToDelete = [self.fetchedResultsController objectAtIndexPath:indexPath];
+        if (objectToDelete == [self currentlyDisplayedObject]) {
+            [self performSegueWithIdentifier:@"showEmpty" sender:self];
+        }
+        
+        NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
+        [context deleteObject:objectToDelete];
         
         NSError *error = nil;
         if (![context save:&error]) {
@@ -230,5 +235,12 @@
     [self.tableView reloadData];
 }
  */
+
+#pragma mark - convenience methods
+
+- (NSManagedObject *)currentlyDisplayedObject
+{
+    return [(EditViewController *)[(UINavigationController *)[self.splitViewController.viewControllers lastObject] topViewController] patient];
+}
 
 @end
