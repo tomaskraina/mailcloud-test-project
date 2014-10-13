@@ -17,7 +17,7 @@
 #import "Patient+Age.h"
 
 @interface MasterViewController ()
-
+@property (strong, nonatomic) NSIndexPath *insertedRowIndexPath;
 @end
 
 @implementation MasterViewController
@@ -53,6 +53,7 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"showEdit"]) {
+        
         NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         Patient *patient = [[self fetchedResultsController] objectAtIndexPath:indexPath];
@@ -62,6 +63,9 @@
         controller.navigationItem.leftItemsSupplementBackButton = YES;
     }
     else if ([[segue identifier] isEqualToString:@"showCreate"]) {
+        
+        [self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:YES];
+        
         NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
         Patient *patient = nil; // new patient
         EditViewController *controller = (EditViewController *)[[segue destinationViewController] topViewController];
@@ -97,7 +101,10 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
         [context deleteObject:[self.fetchedResultsController objectAtIndexPath:indexPath]];
-            
+        
+        // TODO: check if this object is currently displayed in detail/edit view controller
+        // and display the empty view controller if that's the case
+        
         NSError *error = nil;
         if (![context save:&error]) {
             // Replace this implementation with code to handle the error appropriately.
@@ -184,6 +191,8 @@
     switch(type) {
         case NSFetchedResultsChangeInsert:
             [tableView insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+            // Row selection has to be postponed until [tableView endUpdates] call
+            self.insertedRowIndexPath = newIndexPath;
             break;
             
         case NSFetchedResultsChangeDelete:
@@ -204,6 +213,12 @@
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
 {
     [self.tableView endUpdates];
+    
+    // Select newly inserted row (if any)
+    if (self.insertedRowIndexPath) {
+        [self.tableView selectRowAtIndexPath:self.insertedRowIndexPath animated:YES scrollPosition:UITableViewScrollPositionMiddle];
+        self.insertedRowIndexPath = nil;
+    }
 }
 
 /*
