@@ -67,6 +67,12 @@ typedef NS_ENUM(NSInteger, EditViewControllerGenderSegmentedControlValue) {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     [self configureView];
+    
+    // Add gesture recognizer to dismiss keyboard when tapped outside text input
+    UITapGestureRecognizer* tapBackground = [ [UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard:)];
+    tapBackground.numberOfTapsRequired = 1;
+    tapBackground.cancelsTouchesInView = NO;
+    [self.view addGestureRecognizer:tapBackground];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -212,11 +218,21 @@ typedef NS_ENUM(NSInteger, EditViewControllerGenderSegmentedControlValue) {
     self.scrollView.scrollIndicatorInsets = contentInsets;
 }
 
+- (void)dismissKeyboard:(id)sender
+{
+    [self.view endEditing:YES];
+}
+
 #pragma mark - UITextFieldDelegate
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
     self.activeTextInput = textField;
+}
+
+- (BOOL)textFieldShouldEndEditing:(UITextField *)textField
+{
+    return YES;
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField
