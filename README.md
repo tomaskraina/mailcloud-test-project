@@ -1,4 +1,4 @@
-iOS Developer Excercise
+iOS Developer Exercise
 =======================
 
 *Patients Registry*
