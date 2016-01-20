@@ -1,5 +1,5 @@
-iOS Developer Exercise
-=======================
+Test project for iOS developer position @ Mailcloud.com
+=======================================================
 
 *Patients Registry*
 
